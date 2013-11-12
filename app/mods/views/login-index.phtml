@@ -1,0 +1,30 @@
+<?php
+	$mensaje = isset($this->view->error) ? "Datos incorrectos. Por favor intente de nuevo." : " ";
+?>
+<div class="login">
+	<div class="logo"></div>
+	<form class="form-horizontal" action="<?php echo URL ?>/login/login" method="post">
+	  <div class="control-group">
+	    <label class="control-label" for="usuario">Usuario</label>
+	    <div class="controls">
+	      <input type="text" id="usuario" name="usuario" placeholder="Usuario" required />
+	    </div>
+	  </div>
+	  <div class="control-group">
+	    <label class="control-label" for="password">Contrase&ntilde;a</label>
+	    <div class="controls">
+	      <input type="password" id="password" name="password"  placeholder="Contrase&ntilde;a" required />
+	    </div>
+	  </div>
+	  <div class="control-group">
+	    <div class="controls">
+	      <button type="submit" name="submit" class="btn">Iniciar Sesi&oacute;n</button>
+	    </div>
+	    <div class="message">
+	    	<p class="text-error"><?= $mensaje; ?></p>
+	    </div>
+	    
+	  </div>
+	</form>
+</div>
+

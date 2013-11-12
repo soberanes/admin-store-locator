@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>Store Locator Admin Panel</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="<?php echo URL ?>/style/bootstrap.css" />
+        <link rel="stylesheet" href="<?php echo URL ?>/style/style.css" />
+    </head>
+	<body <?php if($controller == 'Login') echo "style='background: #FFFFFF;'";?>>
+		<section id="wrapper" class="wrapper">
+			<?php if($controller != 'Login'){ ?>
+			<header class="main">
+				<ul class="main_nav">
+					<li>
+						<strong>ADMIN PANEL</strong>
+					</li>
+					<li class="logout">
+						<a href="<?= URL;?>/login/logout/"><i class="icon-off icon-white"></i> Logout</a>
+					</li>
+					<li class="dot">·</li>
+					<li class="welcome">
+						<p><i class="icon-user icon-white"></i> Bienvenido <a href="#"><span class="username"><?= $_SESSION['user_name']; ?></span></a></p>
+					</li>
+					<li>
+						<a href="https://www.facebook.com/LibreriasGonvill/app_628262090541545" target="_blank" class="view_site">Ver App en Facebook</a>
+					</li>
+				</ul>
+			</header>
+			<section class="submenu">
+				<div class="navbar">
+				  <div class="navbar-inner">
+				    <div class="container">
+				      <a class="btn btn-navbar" data-toggle="collapse" data-target=".navbar-responsive-collapse">
+				        <span class="icon-bar"></span>
+				        <span class="icon-bar"></span>
+				        <span class="icon-bar"></span>
+				      </a>
+				      <div class="nav-collapse collapse navbar-responsive-collapse">
+				        <ul class="nav">
+				          <li <?php if($action == "index"){ echo "class='active'"; } ?>><a href="<?= URL;?>/index"><i class="icon-home"></i> Inicio</a></li>
+				          <li <?php if($action == "theme"){ echo "class='active'"; } ?>><a href="<?= URL;?>/index/theme"><i class="icon-leaf"></i> App Template</a></li>
+				          <li class="dropdown <?php if($action == "nuevo" || $action == "editar" || $action == "top"){ echo "active"; } ?>">
+				            <a href="#" class="dropdown-toggle" data-toggle="dropdown"><i class="icon-book"></i> Contenido de la App<b class="caret"></b></a>
+				            <ul class="dropdown-menu">
+				              <li><a href="<?= URL;?>/index/nuevo"><i class="icon-plus"></i> Agregar Nuevo Libro</a></li>
+				              <li><a href="<?= URL;?>/index/libros"><i class="icon-tasks"></i> Administrar Libros</a></li>
+				              <li class="divider"></li>
+				              <li><a href="<?= URL;?>/index/top"><i class="icon-th-list"></i> Administrar Top Ten</a></li>
+				            </ul>
+				          </li>
+				        </ul>
+				      </div><!-- /.nav-collapse -->
+				    </div>
+				  </div><!-- /navbar-inner -->
+				</div>
+			</section>
+			<?php } ?>
+			<section id="content">
+				<?php echo $content; ?>
+			</section>
+		</section>
+		<?php if($controller != 'Login'){ ?>
+		<footer class="main">
+			<section>
+				<article class="credits">
+					<p>
+						 Desarrollado por hoppercat &copy; &nbsp;&nbsp;<?php echo date("Y"); ?>
+					</p>
+				</article>
+			</section>
+		</footer>
+		<?php } ?>
+		<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.0/jquery.min.js"></script>
+		<script src="<?= URL; ?>/javascript/jquery.fileupload.js"></script>
+		<script type="text/javascript">
+			$(function () {
+				
+			    $('.tooltip_btn').tooltip();
+			    
+			    
+			});
+		</script>
+		<?php js_print(); ?>
+		<script src="//netdna.bootstrapcdn.com/bootstrap/3.0.0/js/bootstrap.min.js"></script>
+	</body>
+</html>
