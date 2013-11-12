@@ -1,0 +1,100 @@
+/*
+Copyright (c) 2010, Yahoo! Inc. All rights reserved.
+Code licensed under the BSD License:
+http://developer.yahoo.com/yui/license.html
+version: 3.3.0
+build: 3167
+*/
+html{color:#000;background:#FFF;}body,div,dl,dt,dd,ul,ol,li,h1,h2,h3,h4,h5,h6,pre,code,form,fieldset,legend,input,textarea,p,blockquote,th,td{margin:0;padding:0;}table{border-collapse:collapse;border-spacing:0;}fieldset,img{border:0;}address,caption,cite,code,dfn,em,strong,th,var{font-style:normal;font-weight:normal;}li{list-style:none;}caption,th{text-align:left;}h1,h2,h3,h4,h5,h6{font-size:100%;font-weight:normal;}q:before,q:after{content:'';}abbr,acronym{border:0;font-variant:normal;}sup{vertical-align:text-top;}sub{vertical-align:text-bottom;}input,textarea,select{font-family:inherit;font-size:inherit;font-weight:inherit;}input,textarea,select{*font-size:100%;}legend{color:#000;}
+
+*{margin:0;padding:0;}
+body{
+	background: black;
+
+}
+.wrapper{
+	width: 100%;
+	height: 100%;
+	margin: 0 auto;
+	position: absolute;
+	padding: 1px;
+	background: black;
+}
+.row{
+	height: 33.3%;
+}
+.row .img{
+	background-position: center center !important;
+    float: left;
+    height: 100%;
+    position: relative;
+    width: 33.3%;
+    cursor: pointer;
+}
+
+.row .img .img_over{
+    width: 100%;
+    height: 100%;
+    background: black;
+    opacity: 0;
+}
+.row .img .img_over:hover{
+    opacity: .9;
+}
+.row .img .img_over h3{
+	font-size: 2em;
+	position: absolute;
+	z-index: 10;
+	color: #FFFFFF;
+	opacity: 1;
+	font-family: sans-serif;
+	left:25%;
+	width:50%;
+	height: 30%;
+	top: 40%;
+	text-align: center;
+	font-weight: bold;
+}
+
+.row > p {
+    line-height: 0;
+}
+.row .img-1{
+	background: url('http://placehold.it/634x360/ff005d/ffffff') no-repeat 100%;
+}
+.row .img-2{
+	background: url('http://placehold.it/634x360/FA6900/ffffff') no-repeat 100%;
+}
+.row .img-3{
+	background: url('http://placehold.it/634x360/00c964/ffffff') no-repeat 100%;
+}
+.row .img-4{
+	background: url('http://placehold.it/634x360/FA6900/ffffff') no-repeat 100%;
+}
+.row .img-5{
+	background: url('http://placehold.it/634x360/00c964/ffffff') no-repeat 100%;
+}
+.row .img-6{
+	background: url('http://placehold.it/634x360/ff005d/ffffff') no-repeat 100%;
+}
+.row .img-7{
+	background: url('http://placehold.it/634x360/ff005d/ffffff') no-repeat 100%;
+}
+.row .img-8{
+	background: url('http://placehold.it/634x360/FA6900/ffffff') no-repeat 100%;
+}
+.row .img-9{
+	background: url('http://placehold.it/634x360/00c964/ffffff') no-repeat 100%;
+}
+
+/* Login */
+.logo_bd{
+	background: #3F2C26;
+}
+.login{
+	width: 500px;
+	margin: 10% auto;
+	padding: 50px;
+	border: 1px solid #ccc;
+	border-radius: 5px;
+}
